@@ -28,7 +28,7 @@ Each script states what it reads and what it writes; all are deterministic
   future versions will parse the published Markdown directly.
 - [`validate_caution_block.py`](validate_caution_block.py) — the same check
   that CI runs, wrapped as a local script for quick pre-push verification.
-  - [`update_caution_block.py`](update_caution_block.py) - sets or refreshes the standard caution block at the top of every workspace Markdown file in one pass. Skips the same tooling paths as the CI check (`.github/`, `docs-site/README.md`, `docs-site/node_modules/`, `TEMPLATE-USAGE.md`). Edit `CAUTION_TEXT` in the script to change the wording repo-wide. Idempotent: a second run on unchanged input is a no-op. Where `validate_caution_block.py` reports drift, this script fixes it.
+- [`update_caution_block.py`](update_caution_block.py) - sets or refreshes the standard caution block at the top of every workspace Markdown file in one pass. Skips the same tooling paths as the CI check (`.github/`, `docs-site/README.md`, `docs-site/node_modules/`, `TEMPLATE-USAGE.md`). Edit `CAUTION_TEXT` in the script to change the wording repo-wide. Idempotent: a second run on unchanged input is a no-op. Where `validate_caution_block.py` reports drift, this script fixes it.
 
 ## Running
 
