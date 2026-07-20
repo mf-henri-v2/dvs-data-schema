@@ -75,6 +75,7 @@ The format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.
   Verifiable Credential — explicitly not a field-by-field map). All three
   files are clearly labelled derived and non-authoritative.
 - **[repo]** `docs-site/package-lock.json` committed after the first successful `npm install`, so CI can use `npm ci` for reproducible installs. First end-to-end `npm install && npm run build` verified: 38 rendered pages, 23 passthrough assets, build time 1.7s, `<pre class="schema-example">` blocks and cross-file pretty-URL link rewrites all verified in the rendered HTML. Resolves KI-9.
+- **[repo]** `supporting-material/scripts/update_caution_block.py` - deterministic, idempotent script that sets or refreshes the standard caution block at the top of every workspace Markdown file in a single pass. Skips the same tooling paths as the `caution-block.yml` CI check (`.github/`, `docs-site/README.md`, `docs-site/node_modules/`, `TEMPLATE-USAGE.md`). Where `validate_caution_block.py` only reports caution-block drift, this script fixes it. No schema element name, type, cardinality or description changed.
 
 ### Known issues seeded
 
