@@ -27,7 +27,7 @@ CAUTION_TEXT = (
     "This repository is a workspace copy for navigation, drafting, version "
     "control and collaboration. It is not the official statement of the UK "
     "digital verification services trust framework and must not be relied on "
-    "as such. For the authoritative version, see the GOV.UK publication. Test Caution Block."
+    "as such. For the official published DVS trust framework, see the GOV.UK publication."
 )
 
 LINE1 = "> [!CAUTION]"
