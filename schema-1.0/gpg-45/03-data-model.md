@@ -59,9 +59,7 @@ claims:
 
 ### Transliteration status
 
-Transliteration is the process of converting text from one writing system or language into another by focusing on how words sound. It tries to the reflect the pronunciation of the original word using similar sounds in the target language so that speakers of either language can recognise the word.
-
-It is not the same as translation which focuses and converting the meaning of a word, for example 東京 translates to 'eastern capital' but is more commonly known in English in its transliterated form, Tokyo.
+Transliteration is the process of converting text from one writing system or language into another by focusing on how words sound. It tries to the reflect the pronunciation of the original word using similar sounds in the target language so that speakers of either language can recognise the word. It is not the same as translation which focuses and converting the meaning of a word, for example 東京 translates to 'eastern capital' but is more commonly known in English in its transliterated form, Tokyo.
 
 The transliteration status conveys information about the:
 
