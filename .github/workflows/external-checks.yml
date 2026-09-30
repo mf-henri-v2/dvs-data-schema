@@ -1,0 +1,71 @@
+name: External checks
+
+# Checks that depend on other websites. They run once a week, and can be run
+# by hand from the Actions tab. They are kept apart from the checks on pull
+# requests, so that another website being slow or unavailable never blocks a
+# change to this repository.
+#
+# A failed run is the report. Its summary lists what was found.
+
+on:
+  schedule:
+    - cron: "17 4 * * 1" # Mondays, 04:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  external-links:
+    name: External links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      # A link is tried up to 4 times before it is reported. "429 Too Many
+      # Requests" means the website is limiting automated visits, not that the
+      # link is broken. Relative links are checked on every pull request by
+      # tools/check_links.py, so they are left out here.
+      - name: Check links to other websites
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --scheme https --scheme http
+            --max-retries 3
+            --retry-wait-time 20
+            --timeout 30
+            --accept 200..=299,429
+            --exclude-path node_modules
+            "**/*.md" "**/*.yaml" ".github/ISSUE_TEMPLATE/*.yml"
+          fail: true
+
+  published-baseline:
+    name: GOV.UK matches the published baseline
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the tools from the default branch
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+          fetch-depth: 0 # the tags are needed to find the published baseline
+
+      - name: Find the latest published-X.Y tag
+        id: baseline
+        run: |
+          tag="$(git tag --list 'published-*' --sort=-version:refname | head -n 1)"
+          if [ -z "$tag" ]; then
+            echo "::notice::No published-X.Y tag exists yet, so there is nothing to compare GOV.UK with."
+          else
+            git worktree add --detach ../baseline "$tag"
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+
+      # If GOV.UK has been corrected since the tag was made, this fails and
+      # lists each difference. GOV.UK is then ahead of the baseline: see
+      # "When a new version is published" in VERSIONS.md.
+      - name: Compare the text on GOV.UK with the tagged text
+        if: steps.baseline.outputs.tag != ''
+        run: python3 tools/compare_with_govuk.py --root ../baseline
