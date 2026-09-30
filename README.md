@@ -50,14 +50,6 @@ See [`VERSIONS.md`](VERSIONS.md) for how future versions will sit side by side i
 - [`LICENCE.md`](LICENCE.md) — Open Government Licence v3.0 for documentation, MIT License for code, aligned with the GDS Way licensing manual.
 - [`SECURITY.md`](SECURITY.md) — how to report security concerns about the repository or its CI workflows.
 
-## Related repositories
-
-This repository is part of a family of workspace copies for the UK DVS trust framework:
-
-- Trust framework text: [mf-henri-v2/dvs-wip-4](https://github.com/mf-henri-v2/dvs-wip-4)
-- Trust framework rendered site: [mf-henri-v2/dvs-wip-5-web-2](https://github.com/mf-henri-v2/dvs-wip-5-web-2)
-- Data schema (this repository)
-
 ## Note on the authoritative publication
 
 The authoritative version of the UK DVS trust framework data schema is the publication on GOV.UK. This repository is a workspace copy and is not the official statement of government policy.
