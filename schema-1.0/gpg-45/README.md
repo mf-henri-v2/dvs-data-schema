@@ -3,37 +3,31 @@
 > This is a working draft of the UK digital verification services trust framework data schema, maintained for collaboration and review. It is not the formally published version and may differ from it. For the published data schema, see [GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0).
 <!-- caution-banner:end -->
 
-# GPG 45 — identity checking data schema (version 1.0)
+# GPG 45: identity checking
 
-This folder contains the data taxonomy, data model and data dictionary for the ['How to prove and verify someone's identity'](https://www.gov.uk/government/publications/how-to-check-someones-identity-1-0) guidance — Good Practice Guide (GPG) 45.
+This folder holds the data taxonomy, data model and data dictionary for [How to check someone's identity](https://www.gov.uk/government/publications/how-to-check-someones-identity-1-0), also known as Good Practice Guide (GPG) 45.
 
-The authoritative publication lives on GOV.UK:
-
-- [Data taxonomy, data model and data dictionary for GPG 45](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45)
+These sections are part of OfDIA's working draft. For the published version, see the [data schema for GPG 45 on GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45).
 
 ## Sections
 
-- [1. Introduction](01-introduction.md) — what the GPG 45 schema is and what it covers.
-- [2. Data taxonomy](02-data-taxonomy.md) — the hierarchy and classification of GPG 45 data. Covers identity claims, assurance processes and identity checking processes.
-- [3. Data model](03-data-model.md) — the shape of the data. Defines `verified_claims`, `claims`, `verification`, `evidence`, `document`, `electronic_record`, `vouch`, the check and assurance objects, and the supporting sub-elements.
-- [4. Data dictionary](04-data-dictionary.md) — the exact definitions and formats for shared data types (`country_code`, `date`, `encoding`, `language`, `nationality`, `timestamp`).
-- [5. Predefined values](05-predefined-values.md) — the definitions of the enumerated values used across the schema (for example `passport`, `birth_certificate`, `bvp`, `kbv`, `score_3`).
-- [6. Predefined lists](06-predefined-lists.md) — which schema elements are restricted to which sets of predefined values.
+- [1. Introduction](01-introduction.md): what this guide covers
+- [2. Data taxonomy](02-data-taxonomy.md): the kinds of data used in identity checking, and what they are called
+- [3. Data model](03-data-model.md): how the data elements fit together, and the type of each one
+- [4. Data dictionary](04-data-dictionary.md): the formats for shared types such as dates, country codes and languages
+- [5. Predefined values](05-predefined-values.md): what each predefined value means
+- [6. Predefined lists](06-predefined-lists.md): which elements can only have certain values
 
-## Reading order
+If you are looking for a particular data element, start with the data model. Each element links to its format or its list of values.
 
-If you are new to the schema, read in order 1 → 6. If you are looking for a specific element, the data model (section 3) is the most useful jumping-off point; each element links forward to the dictionary, values and lists where relevant.
+## Supporting material
 
-## Supporting material for GPG 45
+These are not part of the published data schema.
 
-Derived artefacts specific to GPG 45 — dot-path views, nested tree views, machine-readable exports, Mermaid diagrams — live under:
-
-- [`supporting-material/machine-readable/gpg-45/`](../../supporting-material/machine-readable/gpg-45/)
-- [`supporting-material/diagrams/`](../../supporting-material/diagrams/)
-
-All supporting material is clearly labelled as derived and non-authoritative.
+- [Diagrams](../../supporting-material/diagrams/README.md)
+- [Data files for GPG 45](../../supporting-material/machine-readable/gpg-45/README.md)
 
 ## Back
 
-- [Schema 1.0 landing page](../README.md)
+- [Contents](../README.md)
 - [Repository home](../../README.md)

@@ -3,55 +3,73 @@
 > This is a working draft of the UK digital verification services trust framework data schema, maintained for collaboration and review. It is not the formally published version and may differ from it. For the published data schema, see [GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0).
 <!-- caution-banner:end -->
 
+![Office for Digital Identities and Attributes](media/ofdia-banner.jpg)
+
 # UK digital verification services trust framework data schema
 
-This repository is a workspace copy of the [UK digital verification services (DVS) trust framework data schema](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0), split into one Markdown file per main section under versioned folders. It is designed to make the schema easier to navigate, review, version and reuse.
+This is the working draft of the UK digital verification services (DVS) trust framework data schema, maintained by the [Office for Digital Identities and Attributes (OfDIA)](https://www.gov.uk/government/organisations/office-for-digital-identities-and-attributes).
 
-The authoritative version of the data schema is the publication on GOV.UK. The text hosted here is a workspace mirror.
+The data schema helps DVS providers and relying parties organise and exchange information in a consistent way. Using it is optional for certified services.
 
-## What the data schema is
+We use this repository to share the data schema as it develops, gather feedback on it, and keep a public record of every change and the reasons for it.
 
-The DVS trust framework data schema describes how DVS providers and relying parties can organise and exchange information in a consistent way to enable interoperability. It covers two good practice guides:
+## Status
 
-- **GPG 45** — the identity checking process described in [How to prove and verify someone's identity](https://www.gov.uk/government/publications/how-to-check-someones-identity-1-0).
-- **GPG 44** — the authentication process described in [How to use authenticators to protect an online service](https://www.gov.uk/government/publications/how-to-use-authenticators-to-protect-an-online-service-1-0).
+- **Published version:** [UK digital verification services trust framework data schema 1.0](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0) on GOV.UK. This is the authoritative version.
+- **This repository:** the working draft. It starts from the published 1.0 text and may include accepted changes that have not been published yet.
+- **Changes since publication:** [compare the working draft with published 1.0](https://github.com/ofdia-uk/dvs-data-schema/compare/published-1.0...main).
 
-For each guide, the schema provides:
+A change accepted here does not change the published data schema. Changes take effect only when OfDIA publishes a new version on GOV.UK. [How versions work](VERSIONS.md).
 
-- a **data taxonomy** (a description of the hierarchy and classification of the data),
-- a **data model** (a description of the data element names, sub-elements and data types), and
-- a **data dictionary** (names, definitions and attributes for the data elements, plus predefined lists and values).
+## Read the data schema
 
-Use of the data schema is **optional** for certified services. It is provided to help services demonstrate interoperability with others in the UK and internationally.
+The data schema has 2 guides. Each guide has the same 6 sections. Start from the [contents page](schema-1.0/README.md), or go straight to a section.
 
-## Which version this repository hosts
+The data model shows how the data is structured. The data dictionary, predefined values and predefined lists give the formats and the values each element can have.
 
-This repository currently hosts **version 1.0** of the data schema, published to coincide with the 1.0 pre-release of the DVS trust framework.
+**[GPG 45: identity checking](schema-1.0/gpg-45/README.md)**
 
-See [`VERSIONS.md`](VERSIONS.md) for how future versions will sit side by side in this repository.
+- [1. Introduction](schema-1.0/gpg-45/01-introduction.md)
+- [2. Data taxonomy](schema-1.0/gpg-45/02-data-taxonomy.md)
+- [3. Data model](schema-1.0/gpg-45/03-data-model.md)
+- [4. Data dictionary](schema-1.0/gpg-45/04-data-dictionary.md)
+- [5. Predefined values](schema-1.0/gpg-45/05-predefined-values.md)
+- [6. Predefined lists](schema-1.0/gpg-45/06-predefined-lists.md)
 
-## How to navigate
+**[GPG 44: authentication](schema-1.0/gpg-44/README.md)**
 
-- [Schema 1.0 landing page](schema-1.0/README.md)
-  - [GPG 45 — identity checking data schema](schema-1.0/gpg-45/README.md)
-  - [GPG 44 — authentication data schema](schema-1.0/gpg-44/README.md)
-- [Supporting material](supporting-material/README.md) — derived artefacts, diagrams, machine-readable exports and scripts. Clearly marked as derived and non-authoritative.
-- [Media](media/README.md) — shared images referenced from workspace pages.
+- [1. Introduction](schema-1.0/gpg-44/01-introduction.md)
+- [2. Data taxonomy](schema-1.0/gpg-44/02-data-taxonomy.md)
+- [3. Data model](schema-1.0/gpg-44/03-data-model.md)
+- [4. Data dictionary](schema-1.0/gpg-44/04-data-dictionary.md)
+- [5. Predefined values](schema-1.0/gpg-44/05-predefined-values.md)
+- [6. Predefined lists](schema-1.0/gpg-44/06-predefined-lists.md)
 
-## Repository design and versioning
+## Give feedback
 
-- [`ARCHITECTURE.md`](ARCHITECTURE.md) — design decisions behind the repository layout, and how it relates to the GOV.UK publication.
-- [`VERSIONS.md`](VERSIONS.md) — how multiple publication versions sit side by side in this repository over time.
-- [`CHANGELOG.md`](CHANGELOG.md) — notable changes to the repository and to the publication text, tracked separately.
-- [`KNOWN-ISSUES.md`](KNOWN-ISSUES.md) — items identified by maintainers that are not yet fixed, seeded before public push.
-- [`docs-site/`](docs-site/README.md) — Eleventy-based GOV.UK-styled rendered view of the repository, deployed to GitHub Pages. Not authoritative; the authoritative publication stays on GOV.UK.
+Anyone with a GitHub account can give feedback. You do not need to suggest new wording, and you do not need to know the technical name of a field.
 
-## Contributing, licence, security
+1. Find the guide and section your feedback is about.
+2. [Open a new issue](https://github.com/ofdia-uk/dvs-data-schema/issues/new/choose) and choose the kind of feedback you want to give.
+3. Fill in the form and submit it.
 
-- [`CONTRIBUTING.md`](CONTRIBUTING.md) — how to suggest edits, raise issues and propose new supporting material.
-- [`LICENCE.md`](LICENCE.md) — Open Government Licence v3.0 for documentation, MIT License for code, aligned with the GDS Way licensing manual.
-- [`SECURITY.md`](SECURITY.md) — how to report security concerns about the repository or its CI workflows.
+[How to give feedback](CONTRIBUTING.md) explains each kind of feedback and what happens after you submit it.
 
-## Note on the authoritative publication
+## See how the data schema changes
 
-The authoritative version of the UK DVS trust framework data schema is the publication on GOV.UK. This repository is a workspace copy and is not the official statement of government policy.
+Changes are proposed and reviewed in pull requests before OfDIA accepts them. Each pull request shows exactly what changed, the discussion about the change, and the feedback that led to it.
+
+- [Pull requests](https://github.com/ofdia-uk/dvs-data-schema/pulls): proposed changes and their review
+- [History](https://github.com/ofdia-uk/dvs-data-schema/commits/main): every accepted change, newest first
+- [Changes since publication](https://github.com/ofdia-uk/dvs-data-schema/compare/published-1.0...main): the working draft compared with published 1.0
+
+## Supporting material
+
+[Supporting material](supporting-material/README.md) holds diagrams, spreadsheet and data files, and notes on other standards. It is there to help people use the data schema. It is not part of the published data schema.
+
+## About this repository
+
+- [Versions and published baselines](VERSIONS.md)
+- [How this repository works](ARCHITECTURE.md), for maintainers
+- [Security](SECURITY.md)
+- [Licence](LICENCE.md): content is available under the Open Government Licence v3.0

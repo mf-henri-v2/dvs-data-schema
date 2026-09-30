@@ -3,77 +3,51 @@
 > This is a working draft of the UK digital verification services trust framework data schema, maintained for collaboration and review. It is not the formally published version and may differ from it. For the published data schema, see [GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0).
 <!-- caution-banner:end -->
 
-# Contributing
+# How to give feedback
 
-Thank you for considering a contribution to the DVS trust framework data schema workspace.
+We welcome feedback on the UK digital verification services trust framework data schema from anyone. That includes service providers, relying parties, conformity assessment bodies, standards bodies, researchers and members of the public.
 
-This repository is a workspace copy of the [UK digital verification services trust framework data schema](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0). It is not the authoritative publication. Contributions here improve how the schema is navigated, presented and reused — they do not on their own change government policy.
+This repository holds OfDIA's working draft. The authoritative version is the [published data schema on GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0).
 
-## What kinds of contribution we welcome
+## Give feedback
 
-- **Typo and formatting corrections** to the workspace text where the workspace diverges from the GOV.UK publication by mistake.
-- **Presentation improvements** — clearer tables, navigation, heading wording, cross-references.
-- **Accessibility improvements** — alt text, table structure, heading levels.
-- **Feedback on the data schema itself** — clarifications, ambiguities, suggested improvements. These do not change the publication in this repository, but we collect them so OfDIA and the wider community can consider them for future revisions.
-- **New supporting material** — diagrams, machine-readable exports, mappings to OIDC, OID4IDA or Verifiable Credentials. These must be clearly labelled as derived and non-authoritative.
-- **Repository tooling** — CI workflows, templates, scripts, site layouts.
+You need a free GitHub account. You do not need to know how GitHub works, and you do not need to suggest new wording.
 
-## What we cannot change here
+1. Find the guide and section your feedback is about in the [data schema](schema-1.0/README.md). If your feedback is about a particular field or value, note its name, for example `date_of_expiry`. You can leave this out if you are not sure.
+2. [Open a new issue](https://github.com/ofdia-uk/dvs-data-schema/issues/new/choose) and choose the option that fits best:
+   - **Schema feedback**: something in the data schema does not work in practice, is missing, or conflicts with something else
+   - **Unclear wording**: you are not sure what something means
+   - **Correction**: a typo, a formatting problem, or a place where this draft differs from GOV.UK by mistake
+   - **Accessibility problem**: something is hard to read, navigate or use
+   - **Broken link or navigation problem**: a link does not work, or something is hard to find
+   - **Other suggestion**: anything else, such as an idea for a diagram, a data file or an example
+3. Fill in the form and submit it.
 
-This repository **cannot** change:
+Please keep each issue to one point where you can. Check the [open issues](https://github.com/ofdia-uk/dvs-data-schema/issues) first, as someone may have raised the same point. You can add a comment to their issue instead.
 
-- the underlying data model,
-- data definitions,
-- field names,
-- hierarchy,
-- cardinality, or
-- the semantic meaning of any schema element.
+Do not include personal data in an issue. Issues are public.
 
-Examples of schema content, objects, properties and relationships must remain substantively identical to the GOV.UK source.
+## What happens next
 
-Substantive changes to the data schema are made by OfDIA and published on GOV.UK. Where a contributor thinks such a change is warranted, they are welcome to open a **schema feedback** issue here so the suggestion can be considered upstream.
+1. OfDIA reads new feedback and labels it. We may ask you a question in the issue.
+2. If we decide a change is needed, we prepare it as a proposed change linked to your issue, so you can follow its progress.
+3. Feedback that would change the data schema itself is considered through OfDIA's policy process. That includes the names, meanings, types and structure of data elements, and the values they can have.
+4. Accepted changes become part of the working draft. They take effect only when OfDIA publishes a new version of the data schema on GOV.UK.
 
-## How to contribute
+Raising an issue does not guarantee a change.
 
-### Small changes
+## If you cannot use GitHub
 
-For typos, broken links, formatting tidy-ups and clear factual mistakes:
+You can contact OfDIA using the details on the [OfDIA page on GOV.UK](https://www.gov.uk/government/organisations/office-for-digital-identities-and-attributes).
 
-1. Fork the repository.
-2. Make the change on a branch.
-3. Open a pull request using the template. Fill in the "nature of change" section so reviewers can tell at a glance whether this is a `[repo]` or `[publication]` change.
-4. The PR template will remind you to:
-   - preserve the caution block at the top of every workspace Markdown file,
-   - update [`CHANGELOG.md`](CHANGELOG.md) under the right heading,
-   - add or update a navigation footer if you add a new page.
+## Security
 
-### Larger changes
+Do not report a security vulnerability in a public issue. Follow the [security policy](SECURITY.md).
 
-For new supporting material, new presentation views, or CI changes:
+## Code of conduct
 
-1. Open an issue first using the most relevant template under [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/). This helps other contributors and maintainers weigh in before you invest time.
-2. After discussion, raise a pull request as above.
+Please be respectful to other contributors and to maintainers. We follow the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
 
-### Feedback on the data schema itself
+## Licence
 
-Use the **schema feedback** issue template. These issues are not acted on in this repository's text — they are collected to inform future GOV.UK revisions.
-
-## Style notes
-
-- Use British English spelling for prose (for example "organisation", "licence" as a noun).
-- Keep the full name "UK digital verification services trust framework" for first references; "DVS trust framework" or just "the trust framework" is fine thereafter.
-- Prefer Markdown tables over HTML tables; GitHub renders them reliably and they are easier to diff.
-- Keep one sentence per line in long paragraphs where it makes diffs clearer, but do not enforce this aggressively.
-- Do not remove or weaken the caution block.
-
-## Where to ask questions
-
-If a contribution does not obviously fit any of the issue templates, open a generic issue and a maintainer will route it.
-
-## Reporting security concerns
-
-Security concerns about this repository or its CI workflows should follow [`SECURITY.md`](SECURITY.md), not the public issue tracker.
-
-## Back
-
-- [Repository home](README.md)
+Feedback you submit is handled under the terms in the [licence](LICENCE.md).

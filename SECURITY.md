@@ -3,43 +3,26 @@
 > This is a working draft of the UK digital verification services trust framework data schema, maintained for collaboration and review. It is not the formally published version and may differ from it. For the published data schema, see [GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0).
 <!-- caution-banner:end -->
 
-# Security policy
+# Security
 
-This repository is a workspace copy of a published government document and its supporting material. It hosts no production services, no user data and no secrets. Security concerns are still welcome — the scope is narrow.
+This repository holds public documents and the tools and workflows that maintain them. It is not a production service and does not process personal data.
+
+## Report a vulnerability
+
+Do not raise a public issue.
+
+Contact OfDIA using the details on the [OfDIA page on GOV.UK](https://www.gov.uk/government/organisations/office-for-digital-identities-and-attributes).
+
+If this repository's [Security tab](https://github.com/ofdia-uk/dvs-data-schema/security) shows a "Report a vulnerability" button, you can use that instead. Only the repository maintainers can see the report.
+
+We will acknowledge your report and agree a reasonable timeline for any fix and disclosure with you.
 
 ## What to report here
 
-- Vulnerabilities in the repository's CI workflows.
-- Vulnerabilities in scripts under `supporting-material/scripts/`.
-- Vulnerabilities in the docs-site build pipeline or its dependencies.
-- Supply-chain concerns with any dependency this repository pulls in.
+- A vulnerability in this repository's workflows, tools or dependencies.
+- Content that could mislead readers in a way that affects security. For example, a change that introduced an incorrect encoding or format for identity data.
 
 ## What to report elsewhere
 
-- Vulnerabilities in a specific certified digital verification service should be reported to that service provider directly, and where appropriate to their Conformity Assessment Body (CAB) and to OfDIA.
-- Vulnerabilities in GOV.UK, the register of digital identity and attribute services, or other government services are reported through those services' own disclosure channels, not via this repository.
-
-## How to report
-
-Please **do not raise a public GitHub issue** for security matters.
-
-Contact the repository maintainers listed in [`.github/CODEOWNERS`](.github/CODEOWNERS) via a private channel, or email the Office for Digital Identities and Attributes through the contact route listed on their [GOV.UK page](https://www.gov.uk/government/organisations/office-for-digital-identities-and-attributes).
-
-We will acknowledge receipt, work with you on a reasonable disclosure timeline, and credit the reporter in any resulting advisory unless you prefer otherwise.
-
-## Scope
-
-In scope:
-
-- This repository and its CI workflows.
-- The docs-site Eleventy build.
-
-Out of scope:
-
-- Third-party services linked to from the repository.
-- The authoritative GOV.UK publication (report via GOV.UK).
-- Any downstream fork or mirror of this repository.
-
-## Back
-
-- [Repository home](README.md)
+- A vulnerability in a certified digital verification service: report it to the service provider. Where appropriate, also tell their conformity assessment body and OfDIA.
+- A vulnerability in GOV.UK, the register of digital identity and attribute services, or another government service: use that service's own disclosure route.

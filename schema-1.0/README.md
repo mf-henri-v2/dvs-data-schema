@@ -3,57 +3,45 @@
 > This is a working draft of the UK digital verification services trust framework data schema, maintained for collaboration and review. It is not the formally published version and may differ from it. For the published data schema, see [GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0).
 <!-- caution-banner:end -->
 
-# UK DVS trust framework data schema — version 1.0
+# UK digital verification services trust framework data schema: contents
 
-This folder contains the **1.0 pre-release** publication of the UK digital verification services (DVS) trust framework data schema, split by main section and by guide.
+This folder holds OfDIA's working draft of the UK digital verification services (DVS) trust framework data schema. It started from [version 1.0 as published on GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0) and may include accepted changes that have not been published yet. [Versions](../VERSIONS.md) explains how to see what has changed since publication.
 
-The files in this folder mirror the official publication text as published by the Office for Digital Identities and Attributes (OfDIA). They are maintained here to make the schema easier to navigate, review, version and reuse. The authoritative version is the publication on GOV.UK:
+The data schema has 2 guides. Each guide covers one good practice guide (GPG) and has the same 6 sections:
 
-- [Data schema landing page on GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0)
+- the data taxonomy names the kinds of data the guide covers
+- the data model shows how the data elements fit together, and the type of each one
+- the data dictionary, predefined values and predefined lists give the formats, and the values an element can have
 
-## About this version
+## GPG 45: identity checking
 
-- **Published:** to coincide with the 1.0 pre-release of the UK DVS trust framework.
-- **Scope:** covers both GPG 45 (identity checking) and GPG 44 (authentication).
-- **Optional use:** the data schema is optional for certified services. It exists to help services demonstrate interoperability.
-- **Upstream correction (13 April 2026):** a typo was corrected on GOV.UK where `content_format` had incorrectly been shown as `content_type` within the attachment element. The text hosted here matches the corrected GOV.UK version.
+The data schema for [How to check someone's identity](https://www.gov.uk/government/publications/how-to-check-someones-identity-1-0), also known as GPG 45. [About this guide](gpg-45/README.md).
 
-## GPG 45 — identity checking data schema
+- [1. Introduction](gpg-45/01-introduction.md)
+- [2. Data taxonomy](gpg-45/02-data-taxonomy.md)
+- [3. Data model](gpg-45/03-data-model.md)
+- [4. Data dictionary](gpg-45/04-data-dictionary.md)
+- [5. Predefined values](gpg-45/05-predefined-values.md)
+- [6. Predefined lists](gpg-45/06-predefined-lists.md)
 
-The schema for the identity checking process described in [How to prove and verify someone's identity](https://www.gov.uk/government/publications/how-to-check-someones-identity-1-0).
+## GPG 44: authentication
 
-- [GPG 45 landing page](gpg-45/README.md)
-  - [1. Introduction](gpg-45/01-introduction.md)
-  - [2. Data taxonomy](gpg-45/02-data-taxonomy.md)
-  - [3. Data model](gpg-45/03-data-model.md)
-  - [4. Data dictionary](gpg-45/04-data-dictionary.md)
-  - [5. Predefined values](gpg-45/05-predefined-values.md)
-  - [6. Predefined lists](gpg-45/06-predefined-lists.md)
+The data schema for [How to use authenticators to protect an online service](https://www.gov.uk/government/publications/how-to-use-authenticators-to-protect-an-online-service-1-0), also known as GPG 44. [About this guide](gpg-44/README.md).
 
-## GPG 44 — authentication data schema
-
-The schema for the authentication process described in [How to use authenticators to protect an online service](https://www.gov.uk/government/publications/how-to-use-authenticators-to-protect-an-online-service-1-0).
-
-- [GPG 44 landing page](gpg-44/README.md)
-  - [1. Introduction](gpg-44/01-introduction.md)
-  - [2. Data taxonomy](gpg-44/02-data-taxonomy.md)
-  - [3. Data model](gpg-44/03-data-model.md)
-  - [4. Data dictionary](gpg-44/04-data-dictionary.md)
-  - [5. Predefined values](gpg-44/05-predefined-values.md)
-  - [6. Predefined lists](gpg-44/06-predefined-lists.md)
-
-## How the guides differ
-
-GPG 45 and GPG 44 share the same overall structure (taxonomy, model, dictionary, predefined values, predefined lists) but the schemas themselves are very different in size and shape:
-
-- **GPG 45** is considerably larger. It describes identity claims, evidence (documents, electronic records and vouches), the checks performed on that evidence, and how the whole thing maps onto a GPG 45 level of confidence. Many sub-elements reference each other, so the data model reads as a tree of nested objects.
-- **GPG 44** is compact. Authentication is modelled as a top-level `authentication` object with a small number of fields and an array of `authenticator` objects, each with a type and a quality.
-
-Both guides follow the same principle: a **taxonomy** explains the ideas, a **data model** shows the shape of the data, and a **data dictionary** gives the exact names, formats and allowed values.
+- [1. Introduction](gpg-44/01-introduction.md)
+- [2. Data taxonomy](gpg-44/02-data-taxonomy.md)
+- [3. Data model](gpg-44/03-data-model.md)
+- [4. Data dictionary](gpg-44/04-data-dictionary.md)
+- [5. Predefined values](gpg-44/05-predefined-values.md)
+- [6. Predefined lists](gpg-44/06-predefined-lists.md)
 
 ## Supporting material
 
-Diagrams, machine-readable exports and implementation-oriented views live in the [supporting-material](../supporting-material/README.md) folder at the top of the repository. Anything in that folder is clearly labelled as derived and non-authoritative.
+[Supporting material](../supporting-material/README.md) holds diagrams, spreadsheet and data files, and notes on other standards. It is not part of the published data schema.
+
+## Give feedback
+
+[Open a new issue](https://github.com/ofdia-uk/dvs-data-schema/issues/new/choose) about any section. [How to give feedback](../CONTRIBUTING.md) explains the options.
 
 ## Back
 
