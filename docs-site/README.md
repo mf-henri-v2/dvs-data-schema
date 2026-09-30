@@ -17,6 +17,8 @@ The site has no copy of the text. [Eleventy](https://www.11ty.dev/) renders the 
 - It renders the bold first column of the GPG 45 predefined lists table as row headings, as GOV.UK does.
 - It applies GOV.UK Frontend styles.
 
+Each page's feedback link carries the name of the page. GitHub puts it in the "Page" field of whichever issue form the reader chooses. GitHub fills in text fields this way, but not dropdowns, so the reader still chooses the guide and section.
+
 The Markdown is never processed by a template engine, so nothing in an example can be interpreted as code.
 
 The list of guides and sections comes from the contents page, `schema-1.0/README.md`. [`lib/contents.js`](lib/contents.js) reads it, so the site keeps no list of its own.
