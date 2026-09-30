@@ -1,5 +1,7 @@
+<!-- caution-banner:start (wording is kept in tools/caution-banner.md; edit it there) -->
 > [!CAUTION]
-> This repository is a workspace copy for navigation, drafting, version control and collaboration. It is not the official statement of the UK digital verification services trust framework and must not be relied on as such. For the official published DVS trust framework, see the GOV.UK publication.
+> This is a working draft of the UK digital verification services trust framework data schema, maintained for collaboration and review. It is not the formally published version and may differ from it. For the published data schema, see [GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0).
+<!-- caution-banner:end -->
 
 # Licence
 
@@ -9,7 +11,7 @@ This repository follows the [GDS Way licensing manual](https://gds-way.digital.c
 
 ## Documentation
 
-Unless otherwise noted, the documentation in this repository, including the workspace copies of the data schema text under `schema-*/`, is © Crown copyright and available under the terms of the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
+Unless otherwise noted, the documentation in this repository, including the data schema text under `schema-1.0/`, is © Crown copyright and available under the terms of the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
 
 > © Crown copyright, licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
 
@@ -17,7 +19,7 @@ The authoritative publication on GOV.UK is also licensed under OGL v3.0 except w
 
 ## Code
 
-All code in this repository — including CI workflows, scripts under `supporting-material/scripts/`, and site build tooling under `docs-site/` — is released under the MIT License.
+All code in this repository — including the workflows under `.github/` and the tools under `tools/` — is released under the MIT License.
 
 ```text
 MIT License
@@ -49,7 +51,7 @@ This repository uses British English "licence" as the noun everywhere, but retai
 
 ## Note on the authoritative publication
 
-The authoritative version of the UK DVS trust framework data schema is the publication on GOV.UK. This repository is a workspace copy and is not the official statement of government policy.
+The authoritative version of the UK digital verification services trust framework data schema is the [publication on GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0). This repository holds OfDIA's working draft.
 
 ## Back
 

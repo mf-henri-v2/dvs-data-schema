@@ -1,24 +1,25 @@
+<!-- caution-banner:start (wording is kept in tools/caution-banner.md; edit it there) -->
 > [!CAUTION]
-> This repository is a workspace copy for navigation, drafting, version control and collaboration. It is not the official statement of the UK digital verification services trust framework and must not be relied on as such. For the official published DVS trust framework, see the GOV.UK publication.
+> This is a working draft of the UK digital verification services trust framework data schema, maintained for collaboration and review. It is not the formally published version and may differ from it. For the published data schema, see [GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0).
+<!-- caution-banner:end -->
 
-# GPG 44 — machine-readable exports
+# Data files for GPG 44
 
-Derived, non-authoritative views of the GPG 44 schema. See the parent folder
-[README](../README.md) for the labelling and regeneration rules.
+Parts of the [GPG 44 data schema](../../../schema-1.0/gpg-44/README.md) as files you can open in a spreadsheet or read with software. [Data files](../README.md) explains how each one is kept up to date.
 
-## Files
+These files are not part of the published data schema. If a file differs from the data schema, the data schema is right.
 
-- [`data-dictionary.csv`](data-dictionary.csv) — every element with its
-  description (from Table D1 in `04-data-dictionary.md`).
-- [`data-dictionary.yaml`](data-dictionary.yaml) — the same content with
-  nested structure.
-- [`predefined-values.csv`](predefined-values.csv) — Table V1.
-- [`predefined-lists.csv`](predefined-lists.csv) — Table L1.
-- [`dot-path-view.md`](dot-path-view.md) — every field as a dot-path.
-- [`nested-tree-view.md`](nested-tree-view.md) — indented tree view.
+| File | What it holds |
+| --- | --- |
+| [`predefined-values.csv`](predefined-values.csv) | The table in [Predefined values](../../../schema-1.0/gpg-44/05-predefined-values.md), cell for cell |
+| [`predefined-lists.csv`](predefined-lists.csv) | The table in [Predefined lists](../../../schema-1.0/gpg-44/06-predefined-lists.md), cell for cell |
+| [`data-dictionary.csv`](data-dictionary.csv) | Every element in the [data model](../../../schema-1.0/gpg-44/03-data-model.md), with its sub-elements, their types and a short description. The descriptions are summaries, not the published wording |
+| [`data-dictionary.yaml`](data-dictionary.yaml) | The same rows as `data-dictionary.csv`, grouped by element |
+| [Dot-path view](dot-path-view.md) | Every element as a path from `authentication` |
+| [Nested tree view](nested-tree-view.md) | Every element, indented to show which element contains which |
 
 ## Back
 
-- [machine-readable/](../README.md)
+- [Data files](../README.md)
 - [Supporting material](../../README.md)
 - [Repository home](../../../README.md)

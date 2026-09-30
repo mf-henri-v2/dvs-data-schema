@@ -1,0 +1,72 @@
+name: "Accessibility problem"
+description: "Something is hard to read, navigate or use, including with assistive technology."
+labels: ["accessibility", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Accessibility problems are a priority. Tell us as much as you are comfortable sharing."
+  - type: input
+    id: page
+    attributes:
+      label: "Page (optional)"
+      description: "The page your feedback is about. This is filled in for you if you followed a feedback link on the reading website."
+  - type: dropdown
+    id: guide
+    attributes:
+      label: "Where is the problem?"
+      options:
+        - "GPG 45: identity checking"
+        - "GPG 44: authentication"
+        - "Both guides"
+        - "Supporting material"
+        - "Something else, or not sure"
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: "Which section is it in?"
+      description: "Each guide has the same 6 sections. Choose the last option if you are not sure."
+      options:
+        - "1. Introduction"
+        - "2. Data taxonomy"
+        - "3. Data model"
+        - "4. Data dictionary"
+        - "5. Predefined values"
+        - "6. Predefined lists"
+        - "Not about a specific section, or not sure"
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: "What kind of problem is it?"
+      options:
+        - "Example or data structure is hard to follow"
+        - "Table is hard to follow"
+        - "Image or diagram without a useful description"
+        - "Headings or reading order"
+        - "Link text is unclear"
+        - "Colour or contrast"
+        - "Screen reader or other assistive technology"
+        - "Keyboard navigation"
+        - "Language is hard to understand"
+        - "Something else"
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: "What is the problem?"
+      description: "Describe what happened and what you expected."
+    validations:
+      required: true
+  - type: input
+    id: technology
+    attributes:
+      label: "Assistive technology or browser (optional)"
+      description: "If relevant."
+      placeholder: "For example, NVDA with Firefox on Windows"
+  - type: markdown
+    attributes:
+      value: "Issues are public. Do not include personal data, such as names, email addresses or details about individuals."

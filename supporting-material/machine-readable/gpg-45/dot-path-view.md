@@ -1,12 +1,17 @@
+<!-- caution-banner:start (wording is kept in tools/caution-banner.md; edit it there) -->
 > [!CAUTION]
-> This repository is a workspace copy for navigation, drafting, version control and collaboration. It is not the official statement of the UK digital verification services trust framework and must not be relied on as such. For the official published DVS trust framework, see the GOV.UK publication.
+> This is a working draft of the UK digital verification services trust framework data schema, maintained for collaboration and review. It is not the formally published version and may differ from it. For the published data schema, see [GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0).
+<!-- caution-banner:end -->
 
-> Derived, non-authoritative, for implementation support only.  
-> Authoritative definition: the publication text under `schema-1.0/`.
+# GPG 45: dot-path view
 
-# GPG 45 — dot-path view
+Every element of the GPG 45 data model, written as a path from `verified_claims` with a dot between each level. `[]` marks an array.
 
-Every field of the GPG 45 data model as a dot-separated path. Arrays are marked `[]`. Use these when referencing a specific field in an issue, ticket or PR.
+You can use a path to say exactly which element you mean, for example when you [give feedback](../../../CONTRIBUTING.md).
+
+This view was written by hand from the [GPG 45 data model](../../../schema-1.0/gpg-45/03-data-model.md). It is not part of the published data schema. If it differs from the data model, the data model is right.
+
+Three elements are used in more than one place: `check_details`, `attachment` and `authority`. Their sub-elements are listed once, at the end.
 
 ```text
 verified_claims
@@ -88,6 +93,7 @@ verified_claims.verification.assurance_process.assurance_details[].assurance_cla
 verified_claims.verification.assurance_process.assurance_details[].evidence_ref[]
 verified_claims.verification.assurance_process.assurance_details[].evidence_ref[].check_id
 verified_claims.verification.assurance_process.assurance_details[].evidence_ref[].evidence_ref
+verified_claims.verification.assurance_process.assurance_details[].evidence_ref[].evidence_ref.evidence_classification
 
 # Shared sub-elements referenced from multiple places:
 #   check_details.check_method
@@ -103,3 +109,9 @@ verified_claims.verification.assurance_process.assurance_details[].evidence_ref[
 #   authority.country_code
 #   authority.jurisdiction
 ```
+
+## Back
+
+- [Data files for GPG 45](README.md)
+- [Supporting material](../../README.md)
+- [Repository home](../../../README.md)

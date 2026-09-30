@@ -1,0 +1,28 @@
+{
+  // Rules for the "Markdown formatting" check.
+  // To run it in a local copy: npx markdownlint-cli2
+  "globs": ["**/*.md"],
+  "ignores": ["**/node_modules/**"],
+  "config": {
+    "default": true,
+
+    // Each paragraph, list item and table row is written on one line, however
+    // long. A change to the text then shows as a change to that line only.
+    "MD013": false,
+
+    // Only the HTML the text needs: data model examples (<pre>) and the links
+    // inside them, and the tables in the presentation experiments.
+    "MD033": {
+      "allowed_elements": ["pre", "a", "table", "thead", "tbody", "tr", "th", "td", "code"]
+    },
+
+    // "Repository navigation" at the end of each section file is bold text,
+    // not a heading, so that it stays out of the page's outline.
+    "MD036": false,
+
+    // Every file starts with the caution banner, which
+    // tools/caution_banner.py checks. Section files then start with a level 2
+    // heading, as the text does on GOV.UK.
+    "MD041": false
+  }
+}
