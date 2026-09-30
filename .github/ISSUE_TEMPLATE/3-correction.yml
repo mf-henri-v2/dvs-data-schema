@@ -1,0 +1,57 @@
+name: "Correction"
+description: "A typo, a formatting problem, or a place where this draft differs from GOV.UK by mistake."
+labels: ["correction", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Use this form for mistakes that do not change what the data schema says. If the data schema itself should change, use Schema feedback instead."
+  - type: dropdown
+    id: guide
+    attributes:
+      label: "Which guide is this about?"
+      options:
+        - "GPG 45: identity checking"
+        - "GPG 44: authentication"
+        - "Both guides"
+        - "Supporting material"
+        - "Something else, or not sure"
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: "Which section is this about?"
+      description: "Each guide has the same 6 sections. Choose the last option if you are not sure."
+      options:
+        - "1. Introduction"
+        - "2. Data taxonomy"
+        - "3. Data model"
+        - "4. Data dictionary"
+        - "5. Predefined values"
+        - "6. Predefined lists"
+        - "Not about a specific section, or not sure"
+    validations:
+      required: true
+  - type: input
+    id: reference
+    attributes:
+      label: "Field or value name (optional)"
+      description: "If you know it. You can describe it in your own words instead."
+      placeholder: "For example, date_of_expiry or check_method"
+  - type: textarea
+    id: problem
+    attributes:
+      label: "What needs correcting?"
+      description: "Quote the text if you can and say what is wrong with it."
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: "Suggested correction (optional)"
+      description: "If you have one. It is fine to leave this blank."
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: "Issues are public. Do not include personal data, such as names, email addresses or details about individuals."

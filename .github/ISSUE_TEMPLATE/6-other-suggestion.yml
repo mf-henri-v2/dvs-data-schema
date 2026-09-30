@@ -1,0 +1,41 @@
+name: "Other suggestion"
+description: "Anything else, such as an idea for a diagram, a data file, an example or guidance to help people use the data schema."
+labels: ["suggestion", "triage"]
+body:
+  - type: dropdown
+    id: guide
+    attributes:
+      label: "Which guide is this about? (optional)"
+      options:
+        - "GPG 45: identity checking"
+        - "GPG 44: authentication"
+        - "Both guides"
+        - "Supporting material"
+        - "Something else, or not sure"
+    validations:
+      required: false
+  - type: dropdown
+    id: section
+    attributes:
+      label: "Which section is this about? (optional)"
+      description: "Each guide has the same 6 sections. Choose the last option if you are not sure."
+      options:
+        - "1. Introduction"
+        - "2. Data taxonomy"
+        - "3. Data model"
+        - "4. Data dictionary"
+        - "5. Predefined values"
+        - "6. Predefined lists"
+        - "Not about a specific section, or not sure"
+    validations:
+      required: false
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: "What is your suggestion?"
+      description: "Describe your idea and what it would help people do."
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "Issues are public. Do not include personal data, such as names, email addresses or details about individuals."

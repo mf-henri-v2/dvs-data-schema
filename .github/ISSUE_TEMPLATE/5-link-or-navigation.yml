@@ -1,0 +1,46 @@
+name: "Broken link or navigation problem"
+description: "A link does not work or goes to the wrong place, or something is hard to find."
+labels: ["correction", "triage"]
+body:
+  - type: dropdown
+    id: guide
+    attributes:
+      label: "Where is the problem?"
+      options:
+        - "GPG 45: identity checking"
+        - "GPG 44: authentication"
+        - "Both guides"
+        - "Supporting material"
+        - "Something else, or not sure"
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: "Which section is it in?"
+      description: "Each guide has the same 6 sections. Choose the last option if you are not sure."
+      options:
+        - "1. Introduction"
+        - "2. Data taxonomy"
+        - "3. Data model"
+        - "4. Data dictionary"
+        - "5. Predefined values"
+        - "6. Predefined lists"
+        - "Not about a specific section, or not sure"
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: "Which link or page? (optional)"
+      description: "Paste the link, or describe where it is."
+  - type: textarea
+    id: problem
+    attributes:
+      label: "What is wrong?"
+      description: "For example, the link returns an error, goes to an out-of-date page, or you could not find what you were looking for."
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "Issues are public. Do not include personal data, such as names, email addresses or details about individuals."

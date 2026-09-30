@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Official DVS trust framework data schema publication
+  - name: Read the published data schema on GOV.UK
     url: https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0
-    about: For the authoritative published data schema, see GOV.UK. This repository is a workspace copy.
-  - name: Office for Digital Identities and Attributes (OfDIA)
+    about: GOV.UK holds the authoritative, published version of the data schema.
+  - name: Report a security vulnerability
+    url: https://github.com/ofdia-uk/dvs-data-schema/blob/main/SECURITY.md
+    about: Do not report security vulnerabilities in a public issue. Follow the security policy instead.
+  - name: Contact OfDIA without using GitHub
     url: https://www.gov.uk/government/organisations/office-for-digital-identities-and-attributes
-    about: For questions about government policy on digital identity and attributes.
-  - name: Security concerns
-    url: https://github.com/OWNER/REPO/blob/main/SECURITY.md
-    about: Please do not raise a public issue for security matters. See SECURITY.md.
+    about: Use the contact details on the OfDIA page on GOV.UK.
