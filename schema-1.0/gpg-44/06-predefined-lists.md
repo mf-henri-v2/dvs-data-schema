@@ -5,7 +5,7 @@
 
 ## Predefined lists
 
-### Table L1: Predefined lists - allowed values
+## Table L1: Predefined lists - allowed values
 
 | Predefined list | Allowed values | Notes |
 | --- | --- | --- |
