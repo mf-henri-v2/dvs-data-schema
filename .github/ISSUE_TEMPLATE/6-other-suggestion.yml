@@ -2,6 +2,11 @@ name: "Other suggestion"
 description: "Anything else, such as an idea for a diagram, a data file, an example or guidance to help people use the data schema."
 labels: ["suggestion", "triage"]
 body:
+  - type: input
+    id: page
+    attributes:
+      label: "Page (optional)"
+      description: "The page your feedback is about. This is filled in for you if you followed a feedback link on the reading website."
   - type: dropdown
     id: guide
     attributes:
