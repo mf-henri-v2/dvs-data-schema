@@ -5,7 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
-  markdownLibrary, createMarkdownLibrary, stripRepositoryFurniture, firstHeading, githubSlug, siteUrlFor, rewriteUrl,
+  createMarkdownLibrary, stripRepositoryFurniture, firstHeading, githubSlug, siteUrlFor, rewriteUrl,
   CANONICAL_REPOSITORY_URL,
 } from "../lib/markdown.js";
 import { readContents, feedbackChoices, NO_SECTION, SUPPORTING_MATERIAL, OTHER_GUIDE } from "../lib/contents.js";
@@ -17,7 +17,12 @@ const FOOTER =
   "\n---\n\n**Repository navigation**\n\n[← Previous: 2. Data taxonomy](02-data-taxonomy.md) · [Repository home](../../README.md)\n";
 const MODEL = "../schema-1.0/gpg-45/03-data-model.md";
 
-const render = (source, inputPath = MODEL, library = markdownLibrary) =>
+// The tests name the repository themselves. The workflow sets REPOSITORY_URL
+// and REPOSITORY_BRANCH for the build, and the tests must not depend on them.
+const CANONICAL = { repositoryUrl: CANONICAL_REPOSITORY_URL, branch: "main" };
+const canonicalLibrary = createMarkdownLibrary(CANONICAL);
+
+const render = (source, inputPath = MODEL, library = canonicalLibrary) =>
   library.render(stripRepositoryFurniture(source), { page: { inputPath } });
 
 const textOf = (html) => html.replace(/<[^>]+>/g, "");
@@ -93,7 +98,7 @@ test("rewrites links between Markdown files, keeping anchors", () => {
 });
 
 test("sends a link to a repository folder to GitHub's folder view", () => {
-  assert.equal(rewriteUrl("../../tools/", "schema-1.0/gpg-45"), `${CANONICAL_REPOSITORY_URL}/tree/main/tools`);
+  assert.equal(rewriteUrl("../../tools/", "schema-1.0/gpg-45", CANONICAL), `${CANONICAL_REPOSITORY_URL}/tree/main/tools`);
 });
 
 test("leaves links to other websites alone", () => {
