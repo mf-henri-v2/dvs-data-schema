@@ -5,6 +5,11 @@ body:
   - type: markdown
     attributes:
       value: "Accessibility problems are a priority. Tell us as much as you are comfortable sharing."
+  - type: input
+    id: page
+    attributes:
+      label: "Page (optional)"
+      description: "The page your feedback is about. This is filled in for you if you followed a feedback link on the reading website."
   - type: dropdown
     id: guide
     attributes:

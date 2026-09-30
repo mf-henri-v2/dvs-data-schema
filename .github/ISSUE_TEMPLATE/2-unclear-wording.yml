@@ -5,6 +5,11 @@ body:
   - type: markdown
     attributes:
       value: "Tell us which words are unclear and why. You do not need to suggest new wording."
+  - type: input
+    id: page
+    attributes:
+      label: "Page (optional)"
+      description: "The page your feedback is about. This is filled in for you if you followed a feedback link on the reading website."
   - type: dropdown
     id: guide
     attributes:
