@@ -5,6 +5,11 @@ body:
   - type: markdown
     attributes:
       value: "Use this form for mistakes that do not change what the data schema says. If the data schema itself should change, use Schema feedback instead."
+  - type: input
+    id: page
+    attributes:
+      label: "Page (optional)"
+      description: "The page your feedback is about. This is filled in for you if you followed a feedback link on the reading website."
   - type: dropdown
     id: guide
     attributes:

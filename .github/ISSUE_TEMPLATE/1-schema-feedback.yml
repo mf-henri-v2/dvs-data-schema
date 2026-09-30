@@ -5,6 +5,11 @@ body:
   - type: markdown
     attributes:
       value: "Use this form for feedback about what the data schema says: its data elements, what they are called and what they mean, their types, the values they can have, and how they fit together. You do not need to suggest new wording, and you do not need to know the technical name of a field.\n\nOfDIA considers this feedback through its policy process. Raising an issue does not by itself change the data schema."
+  - type: input
+    id: page
+    attributes:
+      label: "Page (optional)"
+      description: "The page your feedback is about. This is filled in for you if you followed a feedback link on the reading website."
   - type: dropdown
     id: guide
     attributes:

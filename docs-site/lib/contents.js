@@ -9,12 +9,6 @@
 const GUIDE = /^## (GPG \d+: .+?)\s*$/;
 const SECTION = /^- \[(\d+\. [^\]]+)\]\(([^)#]+\.md)\)/;
 
-// The choices the issue forms offer when feedback is not about one guide or
-// one section. tools/check_links.py checks the forms against the same words.
-export const SUPPORTING_MATERIAL = "Supporting material";
-export const OTHER_GUIDE = "Something else, or not sure";
-export const NO_SECTION = "Not about a specific section, or not sure";
-
 /** The guides on the contents page: [{ title, folder, sections: [{ label, path }] }]. */
 export function readContents(markdown) {
   const guides = [];
@@ -38,11 +32,25 @@ export function readContents(markdown) {
   return guides;
 }
 
-/** What to choose in an issue form for feedback about a page. */
-export function feedbackChoices(found, repoPath) {
+/**
+ * How a page is named in the "Page" field of an issue form, for example
+ * "GPG 45: identity checking – 3. Data model".
+ */
+export function pageName(found, repoPath, title) {
   if (found) {
-    return { guide: found.guide.title, section: found.section ? found.section.label : NO_SECTION };
+    return found.section ? `${found.guide.title} – ${found.section.label}` : found.guide.title;
   }
-  const guide = repoPath.startsWith("supporting-material/") ? SUPPORTING_MATERIAL : OTHER_GUIDE;
-  return { guide, section: NO_SECTION };
+  if (repoPath.startsWith("supporting-material/") && title !== "Supporting material") {
+    return `Supporting material – ${title}`;
+  }
+  return title;
+}
+
+/**
+ * A link to the page where a reader chooses the kind of feedback to give.
+ * GitHub passes "page" on to whichever issue form they choose, and fills in
+ * that form's "Page" field with it.
+ */
+export function feedbackUrl(repositoryUrl, page) {
+  return `${repositoryUrl}/issues/new/choose?${new URLSearchParams({ page })}`;
 }

@@ -55,18 +55,9 @@
           <h2 class="govuk-heading-m">Give feedback on this page</h2>
           <p class="govuk-body">
             You can raise feedback on GitHub. You need a free GitHub account, and you do not need to suggest new wording.
-            Each link opens a form with this page already chosen.
           </p>
           <ul class="govuk-list">
-            {% if isSchema %}
-              <li><a class="govuk-link" href="{{ repoPath | issueFormUrl('1-schema-feedback.yml') }}">Something does not work in practice, is missing or conflicts with something else</a></li>
-              <li><a class="govuk-link" href="{{ repoPath | issueFormUrl('2-unclear-wording.yml') }}">Something is unclear</a></li>
-            {% endif %}
-            <li><a class="govuk-link" href="{{ repoPath | issueFormUrl('3-correction.yml') }}">Something needs correcting</a></li>
-            <li><a class="govuk-link" href="{{ repositoryUrl }}/issues/new/choose">Give another kind of feedback</a></li>
-          </ul>
-          <h2 class="govuk-heading-m">See how this page has changed</h2>
-          <ul class="govuk-list">
+            <li><a class="govuk-link" href="{{ repoPath | feedbackUrl(title) }}">Give feedback on GitHub</a></li>
             <li><a class="govuk-link" href="{{ repositoryUrl }}/commits/{{ repositoryBranch }}/{{ repoPath }}">See the history of changes to this page</a></li>
             <li><a class="govuk-link" href="{{ repositoryUrl }}/blob/{{ repositoryBranch }}/{{ repoPath }}">View this page on GitHub</a></li>
           </ul>

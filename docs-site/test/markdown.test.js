@@ -8,7 +8,7 @@ import {
   createMarkdownLibrary, stripRepositoryFurniture, firstHeading, githubSlug, siteUrlFor, rewriteUrl,
   CANONICAL_REPOSITORY_URL,
 } from "../lib/markdown.js";
-import { readContents, feedbackChoices, NO_SECTION, SUPPORTING_MATERIAL, OTHER_GUIDE } from "../lib/contents.js";
+import { readContents, pageName, feedbackUrl } from "../lib/contents.js";
 
 const BANNER =
   "<!-- caution-banner:start (wording is kept in tools/caution-banner.md; edit it there) -->\n" +
@@ -204,14 +204,20 @@ test("refuses a contents page with no guides, instead of building an empty site"
   assert.throws(() => readContents("# Contents\n\nNo guides here.\n"));
 });
 
-test("chooses the guide and section for feedback about a page", () => {
+test("names a page for the Page field of an issue form", () => {
   const guide = { title: "GPG 45: identity checking" };
-  assert.deepEqual(feedbackChoices({ guide, section: { label: "3. Data model" } }, "schema-1.0/gpg-45/03-data-model.md"),
-    { guide: "GPG 45: identity checking", section: "3. Data model" });
-  assert.deepEqual(feedbackChoices({ guide, section: null }, "schema-1.0/gpg-45/README.md"),
-    { guide: "GPG 45: identity checking", section: NO_SECTION });
-  assert.deepEqual(feedbackChoices(null, "supporting-material/diagrams/README.md"), { guide: SUPPORTING_MATERIAL, section: NO_SECTION });
-  assert.deepEqual(feedbackChoices(null, "schema-1.0/README.md"), { guide: OTHER_GUIDE, section: NO_SECTION });
+  assert.equal(pageName({ guide, section: { label: "3. Data model" } }, "schema-1.0/gpg-45/03-data-model.md", "GPG 45 Data model"),
+    "GPG 45: identity checking – 3. Data model");
+  assert.equal(pageName({ guide, section: null }, "schema-1.0/gpg-45/README.md", "GPG 45: identity checking"), "GPG 45: identity checking");
+  assert.equal(pageName(null, "supporting-material/diagrams/README.md", "Diagrams"), "Supporting material – Diagrams");
+  assert.equal(pageName(null, "supporting-material/README.md", "Supporting material"), "Supporting material");
+});
+
+test("builds a feedback link that GitHub can read the page name from", () => {
+  const url = new URL(feedbackUrl("https://github.com/someone/dvs-data-schema", "GPG 45: identity checking – 3. Data model"));
+  assert.equal(url.origin + url.pathname, "https://github.com/someone/dvs-data-schema/issues/new/choose");
+  assert.equal(url.searchParams.get("page"), "GPG 45: identity checking – 3. Data model");
+  assert.equal(url.search.includes(" "), false);
 });
 
 // The real section files: whatever they contain, the site must show the same

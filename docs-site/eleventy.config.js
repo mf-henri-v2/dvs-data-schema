@@ -14,7 +14,7 @@ import {
   markdownLibrary, stripRepositoryFurniture, firstHeading, githubSlug, siteUrlFor,
   REPOSITORY_URL, REPOSITORY_BRANCH,
 } from "./lib/markdown.js";
-import { readContents, feedbackChoices } from "./lib/contents.js";
+import { readContents, pageName, feedbackUrl } from "./lib/contents.js";
 
 const SITE_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO_DIR = path.dirname(SITE_DIR);
@@ -141,14 +141,10 @@ export default function (eleventyConfig) {
     return crumbs;
   });
 
-  // A link that opens one of the repository's issue forms with the guide and
-  // section already chosen. The choices are the ones the forms offer.
-  eleventyConfig.addFilter("issueFormUrl", (repoPath, form) => {
-    const found = locate(repoPath ?? "");
-    const { guide, section } = feedbackChoices(found, repoPath ?? "");
-    const query = new URLSearchParams({ template: form, guide, section });
-    return `${REPOSITORY_URL}/issues/new?${query}`;
-  });
+  // A link to give feedback about a page. It carries the page's name, which
+  // GitHub puts in the "Page" field of whichever issue form the reader chooses.
+  eleventyConfig.addFilter("feedbackUrl", (repoPath, title) =>
+    feedbackUrl(REPOSITORY_URL, pageName(locate(repoPath ?? ""), repoPath ?? "", title)));
 
   eleventyConfig.addGlobalData("repositoryUrl", REPOSITORY_URL);
   eleventyConfig.addGlobalData("repositoryBranch", REPOSITORY_BRANCH);
