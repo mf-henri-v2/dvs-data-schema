@@ -3,7 +3,7 @@
 > This is a working draft of the UK digital verification services trust framework data schema, maintained for collaboration and review. It is not the formally published version and may differ from it. For the published data schema, see [GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0).
 <!-- caution-banner:end -->
 
-## GPG 45 Data model  
+## GPG 45 Data model
 
 The data model provides a description of the data element name, the relevant sub-elements and the data type.
 
@@ -65,7 +65,7 @@ It is not the same as translation which focuses and converting the meaning of a 
 
 The transliteration status conveys information about the:
 
-- original language the text was written in 
+- original language the text was written in
 
 - language the text has been transliterated to
 
@@ -395,16 +395,6 @@ attachment:
      content: data
 </pre>
 
-> **Editor's note — 13 April 2026 upstream correction.** The GOV.UK page for
-> this data schema was updated on 13 April 2026 to correct a typo where
-> `content_format` had previously been shown as `content_type` within the
-> attachment element. The workspace text above matches the corrected GOV.UK
-> version (`content_type` → `encoding`, `content_format` → `encoding_format`).
-> This editor's note is not part of the published schema text; it is a
-> workspace navigation aid for readers who remember the pre-correction
-> wording. See the `[publication]` entry for 2026-04-13 in
-> [`CHANGELOG.md`](../../../CHANGELOG.md).
-
 ### Assurance process
 
 This contains detailed information about:
@@ -468,9 +458,6 @@ evidence_metadata:
 
 ---
 
-**Previous:** [2. Data taxonomy](02-data-taxonomy.md)  
-**Next:** [4. Data dictionary](04-data-dictionary.md)  
-**Guide:** [GPG 45 landing page](README.md)  
-**Version:** [Schema 1.0](../README.md)  
-**Repository home:** [README](../../../README.md)
+**Repository navigation**
 
+[← Previous: 2. Data taxonomy](02-data-taxonomy.md) · [GPG 45 contents](README.md) · [Schema contents](../README.md) · [Repository home](../../README.md) · [Next: 4. Data dictionary →](04-data-dictionary.md)

@@ -29,9 +29,6 @@ authenticator
 
 ---
 
-**Previous:** [2. Data taxonomy](02-data-taxonomy.md)  
-**Next:** [4. Data dictionary](04-data-dictionary.md)  
-**Guide:** [GPG 44 landing page](README.md)  
-**Version:** [Schema 1.0](../README.md)  
-**Repository home:** [README](../../../README.md)
+**Repository navigation**
 
+[← Previous: 2. Data taxonomy](02-data-taxonomy.md) · [GPG 44 contents](README.md) · [Schema contents](../README.md) · [Repository home](../../README.md) · [Next: 4. Data dictionary →](04-data-dictionary.md)

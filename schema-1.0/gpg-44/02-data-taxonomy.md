@@ -45,9 +45,6 @@ An authenticator can protect a service from being accessed by someone who should
 
 ---
 
-**Previous:** [1. Introduction](01-introduction.md)  
-**Next:** [3. Data model](03-data-model.md)  
-**Guide:** [GPG 44 landing page](README.md)  
-**Version:** [Schema 1.0](../README.md)  
-**Repository home:** [README](../../../README.md)
+**Repository navigation**
 
+[← Previous: 1. Introduction](01-introduction.md) · [GPG 44 contents](README.md) · [Schema contents](../README.md) · [Repository home](../../README.md) · [Next: 3. Data model →](03-data-model.md)

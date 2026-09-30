@@ -3,11 +3,11 @@
 > This is a working draft of the UK digital verification services trust framework data schema, maintained for collaboration and review. It is not the formally published version and may differ from it. For the published data schema, see [GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0).
 <!-- caution-banner:end -->
 
-## Data taxonomy  
+## Data taxonomy
 
 This section describes the data taxonomy for GPG 45.
 
-This taxonomy provides a standardised terminology for describing GPG 45 data, setting out the types of data and elements it covers and defining the names of the data elements.  
+This taxonomy provides a standardised terminology for describing GPG 45 data, setting out the types of data and elements it covers and defining the names of the data elements.
 
 The GPG 45 taxonomy includes titles and descriptions for the following areas:
 
@@ -15,13 +15,13 @@ The GPG 45 taxonomy includes titles and descriptions for the following areas:
 
 - Assurance processes
 
-- Identity checking processes  
+- Identity checking processes
 
 - Identity evidence
 
 ### Identity claims
 
-A claimed identity is a combination of information (often a name, date of birth and address) that represents some of the key attributes of whoever a person is claiming to be. 
+A claimed identity is a combination of information (often a name, date of birth and address) that represents some of the key attributes of whoever a person is claiming to be.
 
 Description:
 
@@ -65,9 +65,6 @@ Description:
 
 ---
 
-**Previous:** [1. Introduction](01-introduction.md)  
-**Next:** [3. Data model](03-data-model.md)  
-**Guide:** [GPG 45 landing page](README.md)  
-**Version:** [Schema 1.0](../README.md)  
-**Repository home:** [README](../../../README.md)
+**Repository navigation**
 
+[← Previous: 1. Introduction](01-introduction.md) · [GPG 45 contents](README.md) · [Schema contents](../README.md) · [Repository home](../../README.md) · [Next: 3. Data model →](03-data-model.md)

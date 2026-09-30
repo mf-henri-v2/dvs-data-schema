@@ -15,8 +15,6 @@ The data dictionary is a collection of names, definitions, and attributes about 
 
 ---
 
-**Next:** [2. Data taxonomy](02-data-taxonomy.md)  
-**Guide:** [GPG 44 landing page](README.md)  
-**Version:** [Schema 1.0](../README.md)  
-**Repository home:** [README](../../../README.md)
+**Repository navigation**
 
+[GPG 44 contents](README.md) · [Schema contents](../README.md) · [Repository home](../../README.md) · [Next: 2. Data taxonomy →](02-data-taxonomy.md)

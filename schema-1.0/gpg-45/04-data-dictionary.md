@@ -61,9 +61,6 @@ date: string
 
 ---
 
-**Previous:** [3. Data model](03-data-model.md)  
-**Next:** [5. Predefined values](05-predefined-values.md)  
-**Guide:** [GPG 45 landing page](README.md)  
-**Version:** [Schema 1.0](../README.md)  
-**Repository home:** [README](../../../README.md)
+**Repository navigation**
 
+[← Previous: 3. Data model](03-data-model.md) · [GPG 45 contents](README.md) · [Schema contents](../README.md) · [Repository home](../../README.md) · [Next: 5. Predefined values →](05-predefined-values.md)

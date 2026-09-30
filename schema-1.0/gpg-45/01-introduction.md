@@ -9,14 +9,12 @@ This specification describes the data taxonomy, data model and data dictionary f
 
 The data taxonomy provides a description of the hierarchy and classification of data for GPG 45.
 
-The data model provides a description of the data element name, any relevant sub elements or the data type.  
+The data model provides a description of the data element name, any relevant sub elements or the data type.
 
 The data dictionary is a collection of names, definitions, and lists (enumerations) relating to GPG 45 and the DVS trust framework.
 
 ---
 
-**Next:** [2. Data taxonomy](02-data-taxonomy.md)  
-**Guide:** [GPG 45 landing page](README.md)  
-**Version:** [Schema 1.0](../README.md)  
-**Repository home:** [README](../../../README.md)
+**Repository navigation**
 
+[GPG 45 contents](README.md) · [Schema contents](../README.md) · [Repository home](../../README.md) · [Next: 2. Data taxonomy →](02-data-taxonomy.md)
