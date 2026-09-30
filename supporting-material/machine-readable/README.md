@@ -3,37 +3,41 @@
 > This is a working draft of the UK digital verification services trust framework data schema, maintained for collaboration and review. It is not the formally published version and may differ from it. For the published data schema, see [GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0).
 <!-- caution-banner:end -->
 
-# Machine-readable exports
+# Data files
 
-CSV, YAML, dot-path and nested-tree views of the schema. Organised by guide:
+Parts of the data schema as files you can open in a spreadsheet or read with software.
 
-- [`gpg-45/`](gpg-45/README.md) — GPG 45 exports.
-- [`gpg-44/`](gpg-44/README.md) — GPG 44 exports.
+These files are not part of the published data schema. If a file differs from the [data schema](../../schema-1.0/README.md), the data schema is right.
 
-Every file here is **derived, non-authoritative and for implementation
-support only**. The authoritative definition is the publication text under
-`schema-1.0/`.
+- [Data files for GPG 45](gpg-45/README.md)
+- [Data files for GPG 44](gpg-44/README.md)
 
-## Formats
+## What each file is
 
-- **`data-dictionary.csv`** — flat CSV of element name, description and any
-  notes. Useful for pulling into spreadsheets and data-cataloguing tools.
-- **`data-dictionary.yaml`** — same content as the CSV but structured so
-  that nested relationships and data types can be expressed more clearly.
-- **`predefined-values.csv` / `.yaml`** — the enumerated values and their
-  definitions.
-- **`predefined-lists.csv` / `.yaml`** — which elements are restricted to
-  which sets of values, with notes.
-- **`dot-path-view.md`** — every element and sub-element rendered as a
-  dot-separated path (for example `verified_claims.verification.evidence.
-  document.document_details.type`). Useful when referencing a specific
-  field in an issue, ticket or PR.
-- **`nested-tree-view.md`** — indented tree view of the same content.
+Each guide has the same 6 files.
 
-## Generation
+| File | What it holds | How it is kept up to date |
+| --- | --- | --- |
+| `predefined-values.csv` | The predefined values table, cell for cell | Written by a tool from the data schema |
+| `predefined-lists.csv` | The predefined lists table, cell for cell | Written by a tool from the data schema |
+| `data-dictionary.csv` | Every element in the data model, with its sub-elements, their types and a short description | Written by hand. A tool checks that the elements and types match the data model. The descriptions are summaries, not the published wording |
+| `data-dictionary.yaml` | The same rows as `data-dictionary.csv`, grouped by element | Written by a tool from `data-dictionary.csv` |
+| `dot-path-view.md` | Every element as a path, such as `verified_claims.claims.given_name` | Written by hand |
+| `nested-tree-view.md` | Every element, indented to show which element contains which | Written by hand |
 
-These files are produced by scripts under `../scripts/`. Re-run the scripts
-after any change to `schema-1.0/` so the exports stay in sync.
+The CSV files use commas and UTF-8, and their first line holds the column headings. In the 2 files copied from the data schema, the column headings are the ones in the published tables.
+
+## Keeping the files up to date
+
+After a change to the data schema, run this from the repository folder:
+
+```sh
+python tools/machine_readable.py --write
+```
+
+This rewrites the 3 files the tool writes for each guide. It also reports any element in the data model that is missing from `data-dictionary.csv` or has a different type there. Fix those by hand, along with the path and tree views, which no tool checks.
+
+The same check runs on every pull request. [How this repository works](../../ARCHITECTURE.md#data-files) has more detail.
 
 ## Back
 

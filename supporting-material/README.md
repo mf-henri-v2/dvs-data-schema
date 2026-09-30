@@ -5,51 +5,22 @@
 
 # Supporting material
 
-Everything in this folder is **derived** from the publication text under
-`schema-1.0/`. None of it is authoritative in its own right. It exists to
-help implementers, reviewers and readers work with the schema — by giving
-them machine-readable exports, alternative views, diagrams and mappings to
-other standards.
+This folder holds material made from the data schema to help people use it: diagrams, data files, notes on other standards and an experiment in presentation.
 
-If a derived artefact ever conflicts with the publication text, the
-publication wins and the artefact is corrected.
+None of it is part of the published data schema. Some of it is a draft or an experiment, and the table below says which. If anything here differs from the [data schema](../schema-1.0/README.md), the data schema is right. Please [tell us](../CONTRIBUTING.md) if you find a difference.
 
-## What lives where
+## What is here
 
-- [`diagrams/`](diagrams/README.md) — Mermaid diagrams of the top-level
-  containment of GPG 45 and GPG 44, plus selected sub-structures. Text-based,
-  diff-friendly.
-- [`machine-readable/`](machine-readable/README.md) — CSV and YAML exports of
-  the data dictionary and predefined value tables, plus dot-path and nested
-  tree views of the model. Separate sub-folders for GPG 45 and GPG 44.
-- [`presentation-experiments/`](presentation-experiments/README.md) —
-  colour-coded renderings of selected data-model tables, inspired by the 1.3
-  internal GPG 45 draft. Purely presentational.
-- [`mappings/`](mappings/README.md) — cross-references between schema fields
-  and other widely-used standards (OIDC, OID4IDA, W3C Verifiable Credentials).
-  Empty at launch; seeded by contribution.
-- [`scripts/`](scripts/README.md) — Python scripts that regenerate the
-  derived artefacts from the split source files.
+| Folder | What it holds | Status |
+| --- | --- | --- |
+| [Diagrams](diagrams/README.md) | 3 diagrams of how the main data elements fit together, each with a text description | Drawn by hand from the data model |
+| [Data files](machine-readable/README.md) | The predefined values, predefined lists and data elements as CSV and YAML files, and as lists of paths | The predefined values and lists are copied from the data schema by a tool and checked automatically. The rest is written by hand |
+| [Mappings](mappings/README.md) | Notes comparing the data schema with OpenID Connect, OpenID Connect for Identity Assurance and W3C Verifiable Credentials | Draft. Not checked against those standards, and not a claim that the data schema conforms to them |
+| [Presentation experiments](presentation-experiments/README.md) | Parts of the data model as colour-coded tables | Experiment |
 
-## Labelling rule
+## Suggest a change
 
-Every artefact in this folder must make three things clear:
-
-1. **Derived** from the authoritative publication under `schema-1.0/`.
-2. **Non-authoritative** in its own right.
-3. **For implementation support only** — do not cite in place of the
-   publication.
-
-The convention in this repository is to put a short header at the top of
-each artefact (or its accompanying README for binary formats) stating these
-three things.
-
-## Regeneration
-
-When the publication text changes, the derived artefacts need regenerating.
-Run the scripts under `scripts/` — each one states what it reads and writes.
-Keep the scripts deterministic so that running them on unchanged input
-produces byte-identical output.
+To suggest new supporting material or report a problem with it, [open a new issue](https://github.com/ofdia-uk/dvs-data-schema/issues/new/choose) and choose "Other suggestion" or "Correction".
 
 ## Back
 

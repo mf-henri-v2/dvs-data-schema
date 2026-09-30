@@ -3,17 +3,11 @@
 > This is a working draft of the UK digital verification services trust framework data schema, maintained for collaboration and review. It is not the formally published version and may differ from it. For the published data schema, see [GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0).
 <!-- caution-banner:end -->
 
-# DVS ↔ W3C Verifiable Credentials — notes
+# The data schema and W3C Verifiable Credentials: notes
 
-> Derived, non-authoritative, for implementation support only.
-> Authoritative DVS definition: [`schema-1.0/gpg-45/`](../../schema-1.0/gpg-45/).
-> W3C reference: [Verifiable Credentials Data Model v2.0](https://www.w3.org/TR/vc-data-model-2.0/).
+Discussion notes on how a `verified_claims` object from the [GPG 45 data schema](../../schema-1.0/gpg-45/README.md) could be carried inside a credential that follows the [W3C Verifiable Credentials Data Model v2.0](https://www.w3.org/TR/vc-data-model-2.0/).
 
-This is **not** a field-by-field mapping of DVS to the W3C Verifiable
-Credentials Data Model. A full mapping would be a larger piece of work and
-would live in a separate YAML file alongside `oid4ida-mapping.yaml` and
-`oidc-core-mapping.yaml`. These are discussion notes to help contributors
-think about the relationship.
+These notes are a draft for discussion. They are not part of the published data schema, they have not been checked against the W3C standard, and they do not claim that the data schema conforms to it. They are not an element-by-element comparison.
 
 ## Why a field-by-field mapping is harder here
 
@@ -104,9 +98,8 @@ If a contributor wants to build a DVS → VC adapter, this page documents:
 3. That freshness / validity timestamps belong to the VC, not DVS.
 4. That `type` and `issuer` collisions are superficial, not semantic.
 
-If a field-by-field mapping is wanted, open a `supporting-material` issue
-and we can draft `w3c-vc-mapping.yaml` alongside the OID4IDA and OIDC Core
-mappings.
+To suggest an element-by-element comparison,
+[open a new issue](https://github.com/ofdia-uk/dvs-data-schema/issues/new/choose) and choose "Other suggestion".
 
 ## Back
 

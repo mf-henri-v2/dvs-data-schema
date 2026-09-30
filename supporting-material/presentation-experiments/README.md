@@ -5,64 +5,26 @@
 
 # Presentation experiments
 
-Alternative, visual-first renderings of the data schema. Inspired by the 1.3
-internal GPG 45 draft, whose data-model tables used colour-coded cells to
-help readers scan the model at a glance.
+An experiment in showing parts of the data model as tables, with each type cell coloured by the kind of type it is.
 
-Draft comments on that 1.3 document noted that colour coding was not
-expected to be achievable on GOV.UK. This repository's rendered site and
-GitHub Markdown view can both render inline styled HTML tables, so the
-experiment lives here — as a clearly-labelled alternative view, not a
-replacement for the authoritative text.
+These pages are not part of the published data schema. They were written by hand and cover only some elements. If a page differs from the data model, the data model is right. The descriptions in the tables are summaries, not the published wording.
 
-Everything in this folder is **derived, non-authoritative and for
-implementation support only**. The authoritative text remains the
-publication in [`schema-1.0/`](../../schema-1.0/README.md).
+- [GPG 45: colour-coded data model](gpg-45-colour-coded-model.md)
+- [GPG 44: colour-coded data model](gpg-44-colour-coded-model.md)
 
-## Available experiments
+## The colours
 
-- [`gpg-45-colour-coded-model.md`](gpg-45-colour-coded-model.md) — four key
-  GPG 45 element tables (`claims`, `verification`, `evidence`,
-  `document_details`, plus a legend), rendered with colour-coded type cells.
-- [`gpg-44-colour-coded-model.md`](gpg-44-colour-coded-model.md) — the
-  `authentication` and `authenticator` tables in the same style.
+| Colour | Kind of type |
+| --- | --- |
+| Light yellow | Primitive, such as `string`, `number`, `date` or `timestamp` |
+| Light blue | Reference to another element of the data model |
+| Light green | Array |
+| Light grey | Fixed value, such as 'uk_dvstf' |
+| Light orange | Limited to a predefined list |
 
-## The colour scheme
+Colour is never the only way the kind of type is shown. Each table has a "Kind of type" column that says it in words.
 
-Each row is coloured by the **type** of the field. The legend is repeated
-at the top of each experiment file; the palette is deliberately muted so
-the page remains readable if the colours are not visible.
-
-| Colour | Meaning |
-|---|---|
-| Light yellow  | Primitive type (`string`, `number`, `date`, `timestamp`) |
-| Light blue    | Reference to another object defined elsewhere in the data model |
-| Light green   | Array of a type |
-| Light grey    | Fixed literal value (for example `'uk_dvstf'`, `'document'`, `'gpg45'`) |
-| Light orange  | Restricted to a set of predefined values listed in `06-predefined-lists.md` |
-
-The colour is applied via a `background-color` inline style on each row's
-type cell. Inline styles are preserved by GitHub's Markdown renderer and by
-the docs-site layer; in less capable renderers the colour simply drops
-away and the text remains.
-
-## Accessibility note
-
-Colour is an **additional** signal, not the only signal. Every row also
-states its type as text in the cell next to the colour, so readers who
-cannot see the colour still get the same information. If you find a row
-where the text does not carry the same meaning as the colour, please raise
-an `Accessibility issue`.
-
-## Scope and boundaries
-
-- These files do not change the data model. They are a parallel view.
-- These files do not and must not change a field's name, type, cardinality
-  or description. Any discrepancy between an experiment file and the
-  authoritative text under `schema-1.0/` is a bug in the experiment file.
-- The experiments are hand-authored. If the schema changes upstream, the
-  experiments need to be edited by hand to stay in sync — they are not
-  machine-generated.
+The colours show on the reading website. GitHub removes colours from Markdown pages, so on GitHub the tables are plain and the "Kind of type" column carries the information.
 
 ## Back
 

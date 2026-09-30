@@ -116,8 +116,7 @@ mappings:
     kind: dvs_only
     notes: |
       DVS adds a structured `transliteration_status` object on `address`.
-      No OID4IDA or OIDC Core equivalent. Likely relevant for future IDA
-      work; track via KI-8.
+      No OID4IDA or OIDC Core equivalent.
 
   - dvs: verified_claims.claims.transliteration_status
     target: ~
@@ -153,7 +152,7 @@ mappings:
       age assertions. The closest OIDC / IDA concept is `age_equal_or_over`,
       which asserts a lower bound only. Mapping `is_under` into
       `age_equal_or_over` is not direct — `is_under: 18` is not the same
-      claim as `age_equal_or_over: 18`. Flagged under KI-8.
+      claim as `age_equal_or_over: 18`.
 
   - dvs: verified_claims.claims.is_over
     target: "(approximate) age_equal_or_over"
@@ -510,8 +509,7 @@ mappings:
     target: ~
     kind: dvs_only
     notes: |
-      GPG 45 scoring (score_1..4) is DVS-only. Mentioned in the internal
-      OIDF feedback notes (KI-8).
+      GPG 45 scoring (score_1..4) is DVS-only.
 
   - dvs: "evidence_classification (as a predefined-list value)"
     target: ~
@@ -522,6 +520,5 @@ mappings:
 
 # -----------------------------------------------------------------------------
 # End of mapping.
-# See `README.md` for the labelling rules and `KNOWN-ISSUES.md` (KI-7, KI-8)
-# for the broader OIDF alignment context.
+# See `README.md` for the status of this file and how it is laid out.
 # -----------------------------------------------------------------------------
