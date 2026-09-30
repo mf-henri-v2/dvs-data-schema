@@ -13,7 +13,7 @@ Do not raise a public issue.
 
 Contact OfDIA using the details on the [OfDIA page on GOV.UK](https://www.gov.uk/government/organisations/office-for-digital-identities-and-attributes).
 
-If this repository's [Security tab](https://github.com/ofdia-uk/dvs-data-schema/security) shows a "Report a vulnerability" button, you can use that instead. Only the repository maintainers can see the report.
+If this repository's [Security tab](https://github.com/mf-henri-v2/dvs-data-schema/security) shows a "Report a vulnerability" button, you can use that instead. Only the repository maintainers can see the report.
 
 We will acknowledge your report and agree a reasonable timeline for any fix and disclosure with you.
 

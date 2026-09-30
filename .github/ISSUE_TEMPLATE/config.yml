@@ -4,7 +4,7 @@ contact_links:
     url: https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0
     about: GOV.UK holds the authoritative, published version of the data schema.
   - name: Report a security vulnerability
-    url: https://github.com/ofdia-uk/dvs-data-schema/blob/main/SECURITY.md
+    url: https://github.com/mf-henri-v2/dvs-data-schema/blob/main/SECURITY.md
     about: Do not report security vulnerabilities in a public issue. Follow the security policy instead.
   - name: Contact OfDIA without using GitHub
     url: https://www.gov.uk/government/organisations/office-for-digital-identities-and-attributes

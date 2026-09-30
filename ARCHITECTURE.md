@@ -37,7 +37,7 @@ A change to the schema text is a change to what the data schema says if it alter
 | `media/` | The OfDIA banner image |
 | `tools/` | The caution banner source, and the tools used by the checks, with their tests |
 | `.github/` | Issue forms, pull request template, code owners and workflows |
-| `docs-site/` | Source for the [reading site](https://ofdia-uk.github.io/dvs-data-schema/), built from the Markdown and published from `main` |
+| `docs-site/` | Source for the [reading site](https://mf-henri-v2.github.io/dvs-data-schema/), built from the Markdown and published from `main` |
 
 ## How the text is structured
 
@@ -133,7 +133,7 @@ On a pull request, GitHub runs the workflows and tools as changed by that pull r
 
 ## Reading site
 
-The [reading site](https://ofdia-uk.github.io/dvs-data-schema/) shows the working draft to people who would rather not use GitHub. It renders the Markdown files directly and keeps no copy of the text. Changes to `main` are published automatically. Pull requests are built and checked but never published. The site is not part of GOV.UK, so it uses the GOV.UK Design System's Generic header and none of the GOV.UK branding. It uses the same design as the trust framework reading site. [`docs-site/README.md`](docs-site/README.md) explains how it works, how to run it, and how to publish a preview from a fork.
+The [reading site](https://mf-henri-v2.github.io/dvs-data-schema/) shows the working draft to people who would rather not use GitHub. It renders the Markdown files directly and keeps no copy of the text. Changes to `main` are published automatically. Pull requests are built and checked but never published. The site is not part of GOV.UK, so it uses the GOV.UK Design System's Generic header and none of the GOV.UK branding. It uses the same design as the trust framework reading site. [`docs-site/README.md`](docs-site/README.md) explains how it works, how to run it, and how to publish a preview from a fork.
 
 ## Run the checks in a local copy
 

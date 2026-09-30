@@ -99,7 +99,7 @@ If a contributor wants to build a DVS → VC adapter, this page documents:
 4. That `type` and `issuer` collisions are superficial, not semantic.
 
 To suggest an element-by-element comparison,
-[open a new issue](https://github.com/ofdia-uk/dvs-data-schema/issues/new/choose) and choose "Other suggestion".
+[open a new issue](https://github.com/mf-henri-v2/dvs-data-schema/issues/new/choose) and choose "Other suggestion".
 
 ## Back
 

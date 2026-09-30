@@ -20,7 +20,7 @@ None of it is part of the published data schema. Some of it is a draft or an exp
 
 ## Suggest a change
 
-To suggest new supporting material or report a problem with it, [open a new issue](https://github.com/ofdia-uk/dvs-data-schema/issues/new/choose) and choose "Other suggestion" or "Correction".
+To suggest new supporting material or report a problem with it, [open a new issue](https://github.com/mf-henri-v2/dvs-data-schema/issues/new/choose) and choose "Other suggestion" or "Correction".
 
 ## Back
 

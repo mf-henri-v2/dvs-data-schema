@@ -41,7 +41,7 @@ The data schema for [How to use authenticators to protect an online service](htt
 
 ## Give feedback
 
-[Open a new issue](https://github.com/ofdia-uk/dvs-data-schema/issues/new/choose) about any section. [How to give feedback](../CONTRIBUTING.md) explains the options.
+[Open a new issue](https://github.com/mf-henri-v2/dvs-data-schema/issues/new/choose) about any section. [How to give feedback](../CONTRIBUTING.md) explains the options.
 
 ## Back
 

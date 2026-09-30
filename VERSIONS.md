@@ -19,7 +19,7 @@ The working draft is expected to differ from the latest published version once c
 
 | Tag | Published on GOV.UK | Notes |
 | --- | --- | --- |
-| [`published-1.0`](https://github.com/ofdia-uk/dvs-data-schema/tree/published-1.0) | 3 March 2026, last corrected 13 April 2026 | [Data schema 1.0](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0), published alongside the pre-release of trust framework 1.0. The tag matches the text as corrected on 13 April 2026. |
+| [`published-1.0`](https://github.com/mf-henri-v2/dvs-data-schema/tree/published-1.0) | 3 March 2026, last corrected 13 April 2026 | [Data schema 1.0](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0), published alongside the pre-release of trust framework 1.0. The tag matches the text as corrected on 13 April 2026. |
 
 GOV.UK has corrected data schema 1.0 twice without changing its version number:
 
@@ -28,7 +28,7 @@ GOV.UK has corrected data schema 1.0 twice without changing its version number:
 
 ## Compare the working draft with a published version
 
-- On GitHub: [compare `published-1.0` with the working draft](https://github.com/ofdia-uk/dvs-data-schema/compare/published-1.0...main). This shows every change since publication, file by file. It includes changes to the repository's own tools and documentation as well as changes to the data schema.
+- On GitHub: [compare `published-1.0` with the working draft](https://github.com/mf-henri-v2/dvs-data-schema/compare/published-1.0...main). This shows every change since publication, file by file. It includes changes to the repository's own tools and documentation as well as changes to the data schema.
 - To see only changes to the data schema, in a local copy of the repository:
 
   ```sh

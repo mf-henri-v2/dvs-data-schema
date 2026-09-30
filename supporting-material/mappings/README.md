@@ -38,7 +38,7 @@ The entries were written by hand. When the data schema or a standard changes, th
 
 ## Suggest a change to the data schema
 
-A mapping can point out a difference. It cannot change the data schema. To suggest a change, [open a new issue](https://github.com/ofdia-uk/dvs-data-schema/issues/new/choose) and choose "Schema feedback".
+A mapping can point out a difference. It cannot change the data schema. To suggest a change, [open a new issue](https://github.com/mf-henri-v2/dvs-data-schema/issues/new/choose) and choose "Schema feedback".
 
 ## Back
 

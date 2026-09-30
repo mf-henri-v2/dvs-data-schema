@@ -14,7 +14,7 @@ This repository holds OfDIA's working draft. The authoritative version is the [p
 You need a free GitHub account. You do not need to know how GitHub works, and you do not need to suggest new wording.
 
 1. Find the guide and section your feedback is about in the [data schema](schema-1.0/README.md). If your feedback is about a particular field or value, note its name, for example `date_of_expiry`. You can leave this out if you are not sure.
-2. [Open a new issue](https://github.com/ofdia-uk/dvs-data-schema/issues/new/choose) and choose the option that fits best:
+2. [Open a new issue](https://github.com/mf-henri-v2/dvs-data-schema/issues/new/choose) and choose the option that fits best:
    - **Schema feedback**: something in the data schema does not work in practice, is missing, or conflicts with something else
    - **Unclear wording**: you are not sure what something means
    - **Correction**: a typo, a formatting problem, or a place where this draft differs from GOV.UK by mistake
@@ -23,7 +23,7 @@ You need a free GitHub account. You do not need to know how GitHub works, and yo
    - **Other suggestion**: anything else, such as an idea for a diagram, a data file or an example
 3. Fill in the form and submit it.
 
-Please keep each issue to one point where you can. Check the [open issues](https://github.com/ofdia-uk/dvs-data-schema/issues) first, as someone may have raised the same point. You can add a comment to their issue instead.
+Please keep each issue to one point where you can. Check the [open issues](https://github.com/mf-henri-v2/dvs-data-schema/issues) first, as someone may have raised the same point. You can add a comment to their issue instead.
 
 Do not include personal data in an issue. Issues are public.
 
