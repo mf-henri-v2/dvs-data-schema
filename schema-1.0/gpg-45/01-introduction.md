@@ -1,5 +1,7 @@
+<!-- caution-banner:start (wording is kept in tools/caution-banner.md; edit it there) -->
 > [!CAUTION]
-> This repository is a workspace copy for navigation, drafting, version control and collaboration. It is not the official statement of the UK digital verification services trust framework and must not be relied on as such. For the official published DVS trust framework, see the GOV.UK publication.
+> This is a working draft of the UK digital verification services trust framework data schema, maintained for collaboration and review. It is not the formally published version and may differ from it. For the published data schema, see [GOV.UK](https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0).
+<!-- caution-banner:end -->
 
 ## Introduction
 
